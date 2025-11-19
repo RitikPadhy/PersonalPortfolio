@@ -152,6 +152,13 @@ body.nav-active { overflow: hidden; }
 
 ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
 
+.logo-css {
+  font-size: 3.3rem;
+  font-weight: 700;
+  color: #000; /* Ensure it's full black */
+  text-shadow: 0 0 0 #000; /* Helps with rendering crisp text */
+}
+
 
 
 
@@ -378,14 +385,11 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-banner .w-100 {
-  mask-image: url("../images/Blob.svg");
-  -webkit-mask-image: url("../images/Blog.svg");
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-  mask-size: auto;
-  -webkit-mask-size: auto;
+  width: 500px;   /* Equal width and height */
+  height: 500px;
+  border-radius: 50%;  /* Makes it a perfect circle */
+  background-color: black; 
+  overflow: hidden; 
 }
 
 .hero .shape {
@@ -447,9 +451,7 @@ body.nav-active { overflow: hidden; }
   margin-inline: auto;
 }
 
-.about-card .card-title { margin-block: 16px 10px; }
-
-
+.about-card .card-title { margin-block: 16px 14px; }
 
 
 
