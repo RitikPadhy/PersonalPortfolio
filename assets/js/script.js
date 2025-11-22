@@ -95,3 +95,11 @@ if (contactForm) {
     }
   });
 }
+
+/**
+ * SET CURRENT YEAR IN FOOTER
+ */
+const currentYearElement = document.getElementById("current-year");
+if (currentYearElement) {
+  currentYearElement.textContent = new Date().getFullYear();
+}
