@@ -385,11 +385,14 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-banner .w-100 {
-  width: 500px;   /* Equal width and height */
-  height: 500px;
-  border-radius: 50%;  /* Makes it a perfect circle */
-  background-color: black; 
-  overflow: hidden; 
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: black;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .hero .shape {
@@ -681,6 +684,97 @@ textarea.input-field {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/**
+ * responsive for very small screens (320px-374px)
+ */
+
+@media (max-width: 374px) {
+  
+  /**
+   * REUSED STYLE
+   */
+  
+  .container {
+    padding-inline: 12px;
+  }
+  
+  .h1 { font-size: 2.8rem; }
+  
+  .h2 { font-size: 2.4rem; }
+  
+  .section-text { font-size: 1.5rem; }
+  
+  
+  
+  /**
+   * HERO
+   */
+  
+  .hero-banner .w-100 {
+    max-width: 280px;
+  }
+  
+  .hero .section-text {
+    font-size: 1.4rem;
+  }
+  
+  .btn {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+  
+  
+  
+  /**
+   * ABOUT
+   */
+  
+  .about-card {
+    padding: 20px;
+  }
+  
+  
+  
+  /**
+   * PROJECT
+   */
+  
+  .project-card {
+    --padding: 16px;
+  }
+  
+  
+  
+  /**
+   * CONTACT
+   */
+  
+  .contact-card {
+    padding: 20px;
+  }
+  
+}
+
+
+
+/**
+ * responsive for mobile screens (375px-574px)
+ */
+
+@media (min-width: 375px) and (max-width: 574px) {
+  
+  /**
+   * HERO
+   */
+  
+  .hero-banner .w-100 {
+    max-width: 350px;
+  }
+  
+}
+
+
 
 /**
  * responsive for large than 575px screen
